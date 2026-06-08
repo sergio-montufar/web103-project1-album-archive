@@ -2,7 +2,6 @@ const path = require("path");
 const express = require("express");
 
 const albumsRouter = require("./routes/albums");
-const coversRouter = require("./routes/covers");
 const pagesRouter = require("./routes/pages");
 
 const app = express();
@@ -11,9 +10,8 @@ const PORT = process.env.PORT || 3000;
 // The frontend is a Vite app; we serve its production build (client/dist).
 const CLIENT_DIST = path.join(__dirname, "..", "client", "dist");
 
-// API + generated cover art.
+// JSON API.
 app.use("/api/albums", albumsRouter);
-app.use("/covers", coversRouter);
 
 // Static frontend (CSS/JS bundles, index.html at "/").
 app.use(express.static(CLIENT_DIST));

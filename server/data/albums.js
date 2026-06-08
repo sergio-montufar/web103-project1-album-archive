@@ -1,6 +1,6 @@
 // Album archive data.
-// `slug` is used in the URL (e.g. /albums/thriller).
-// `cover` holds two hex colors used to generate the SVG cover art gradient.
+// `slug` is used in the URL (e.g. /albums/thriller) and to look up the cover
+// image in client/src/covers.js.
 const albums = [
   {
     slug: "luv-is-rage-two",
@@ -8,7 +8,6 @@ const albums = [
     artist: "Lil Uzi Vert",
     year: 2017,
     genre: "Rap",
-    cover: ["#ff5ca2", "#1a1a2e"],
     tracks: [
       "Two®",
       "The Way Life Goes",
@@ -34,7 +33,6 @@ const albums = [
     artist: "Michael Jackson",
     year: 1982,
     genre: "Pop",
-    cover: ["#e63946", "#1d1d1d"],
     tracks: [
       "Wanna Be Startin' Somethin'",
       "Baby Be Mine",
@@ -53,7 +51,6 @@ const albums = [
     artist: "Daft Punk",
     year: 2001,
     genre: "French House",
-    cover: ["#f5a623", "#7a3b00"],
     tracks: [
       "One More Time",
       "Aerodynamic",
@@ -77,7 +74,6 @@ const albums = [
     artist: "Daft Punk",
     year: 2013,
     genre: "Electronic",
-    cover: ["#0a0a0a", "#b8860b"],
     tracks: [
       "Give Life Back to Music",
       "The Game of Love",
@@ -100,7 +96,6 @@ const albums = [
     artist: "Lil Uzi Vert",
     year: 2020,
     genre: "Rap",
-    cover: ["#3a0ca3", "#000814"],
     tracks: [
       "Baby Pluto",
       "Lo Mein",
@@ -128,7 +123,6 @@ const albums = [
     artist: "The Weeknd",
     year: 2025,
     genre: "R&B",
-    cover: ["#e0001b", "#1a0000"],
     tracks: [
       "Wake Me Up",
       "Cry for Me",
@@ -160,7 +154,6 @@ const albums = [
     artist: "Playboi Carti",
     year: 2018,
     genre: "Rap",
-    cover: ["#2b2b2b", "#c1121f"],
     tracks: [
       "Long Time (Intro)",
       "R.I.P.",
@@ -189,7 +182,6 @@ const albums = [
     artist: "Emotional Oranges",
     year: 2019,
     genre: "R&B",
-    cover: ["#ff8c42", "#d62828"],
     tracks: [
       "Don't Be Lazy",
       "Just Like You",
@@ -207,7 +199,6 @@ const albums = [
     artist: "Bad Bunny",
     year: 2025,
     genre: "Reggaeton",
-    cover: ["#cde7f0", "#1d5c8a"],
     tracks: [
       "NUEVAYoL",
       "VOY A LLeVARTE PA PR",
@@ -234,7 +225,6 @@ const albums = [
     artist: "Travis Scott",
     year: 2015,
     genre: "Hip-Hop",
-    cover: ["#7a0000", "#0d0d0d"],
     tracks: [
       "Pornography",
       "Oh My Dis Side (feat. Quavo)",
@@ -258,7 +248,6 @@ const albums = [
     artist: "Trippie Redd",
     year: 2019,
     genre: "Rap",
-    cover: ["#6a0dad", "#1a1a1a"],
     tracks: [
       "Leray",
       "Who Needs Love",
@@ -283,7 +272,6 @@ const albums = [
     artist: "Kanye West",
     year: 2004,
     genre: "Hip-Hop",
-    cover: ["#7b1e1e", "#e8c547"],
     tracks: [
       "Intro",
       "We Don't Care",

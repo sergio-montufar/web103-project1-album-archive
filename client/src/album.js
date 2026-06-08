@@ -1,4 +1,5 @@
 import "./style.css";
+import { covers } from "./covers.js";
 
 // Detail page: read the slug from the URL (/albums/:slug), fetch that album,
 // and fill in the placeholder elements that already exist in album.html.
@@ -17,7 +18,7 @@ const renderAlbum = async () => {
   document.title = `${album.title} · Album Archive`;
 
   const cover = document.getElementById("cover");
-  cover.src = `/covers/${album.slug}.svg`;
+  cover.src = covers[album.slug];
   cover.alt = `${album.title} cover art`;
 
   document.getElementById("title").textContent = album.title;

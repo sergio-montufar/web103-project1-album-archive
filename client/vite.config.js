@@ -21,7 +21,7 @@ function albumRoutes() {
 
 // Multi-page Vite build: each view is its own HTML entry point. The Express
 // backend serves the built output from ../server in production, and proxies
-// the API + cover routes to it during `vite dev`.
+// the API to it during `vite dev`.
 export default defineConfig({
   plugins: [albumRoutes()],
   build: {
@@ -36,7 +36,6 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": "http://localhost:3000",
-      "/covers": "http://localhost:3000",
     },
   },
 });

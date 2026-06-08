@@ -1,4 +1,5 @@
 import "./style.css";
+import { covers } from "./covers.js";
 
 // Home page: fetch all albums from the backend and build a card for each.
 const renderAlbums = async () => {
@@ -19,7 +20,7 @@ const renderAlbums = async () => {
       const article = document.createElement("article");
 
       const cover = document.createElement("img");
-      cover.src = `/covers/${album.slug}.svg`;
+      cover.src = covers[album.slug];
       cover.alt = `${album.title} cover art`;
       article.appendChild(cover);
 
