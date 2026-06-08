@@ -5,7 +5,7 @@ const albumsRouter = require("./routes/albums");
 const pagesRouter = require("./routes/pages");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // The frontend is a Vite app; we serve its production build (client/dist).
 const CLIENT_DIST = path.join(__dirname, "..", "client", "dist");
