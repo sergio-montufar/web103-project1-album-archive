@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Album Archive</title>
+    <title>Album · Album Archive</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
@@ -13,15 +13,29 @@
     <main class="container">
       <header class="archive-header">
         <h1><a href="/">🎵 Album Archive</a></h1>
-        <p>A small collection of albums worth listening to all the way through.</p>
       </header>
-      <section id="album-grid" class="album-grid" aria-busy="true">
-        Loading albums…
+      <p><a href="/">&larr; Back to all albums</a></p>
+      <section id="album-detail" class="detail-layout" aria-busy="true">
+        <div>
+          <img id="cover" alt="" />
+        </div>
+        <div>
+          <hgroup>
+            <h2 id="title"></h2>
+            <p id="artist"></p>
+          </hgroup>
+          <p>
+            <span id="genre" class="tag"></span>
+            <span id="year" class="tag"></span>
+          </p>
+          <h4>Track List</h4>
+          <ol id="track-list" class="track-list"></ol>
+        </div>
       </section>
     </main>
     <footer class="container" style="text-align: center; padding: 2rem 0">
       <small>Album Archive · Built with Express &amp; Picocss</small>
     </footer>
-    <script type="module" src="/src/list.js"></script>
+    <script type="module" src="/src/album.js"></script>
   </body>
 </html>
