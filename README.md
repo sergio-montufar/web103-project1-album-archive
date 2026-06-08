@@ -39,8 +39,6 @@ For frontend development with hot reload, run `npm run dev` in `client` (proxies
 
 ## Video Walkthrough
 
-**Note: please be sure to 
-
 Here's a walkthrough of implemented required features:
 
 <img src='walkthrough.gif' title='Video Walkthrough' width='600' alt='Video Walkthrough' />
