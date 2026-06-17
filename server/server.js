@@ -1,8 +1,12 @@
-const path = require("path");
-const express = require("express");
+import path from "path";
+import { fileURLToPath } from "url";
+import express from "express";
+import "./config/dotenv.js";
+import albumsRouter from "./routes/albums.js";
+import pagesRouter from "./routes/pages.js";
 
-const albumsRouter = require("./routes/albums");
-const pagesRouter = require("./routes/pages");
+// __dirname isn't defined in ES modules, so recreate it from import.meta.url.
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const PORT = process.env.PORT || 3001;

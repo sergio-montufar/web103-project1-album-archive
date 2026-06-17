@@ -4,27 +4,31 @@
 const albums = [
   {
     slug: "luv-is-rage-two",
-    title: "Luv Is Rage 2",
+    title: "Luv Is Rage 2 (Deluxe)",
     artist: "Lil Uzi Vert",
     year: 2017,
     genre: "Rap",
     tracks: [
       "Two®",
-      "The Way Life Goes",
-      "For Real",
       "444+222",
       "Sauce It Up",
       "No Sleep Leak",
+      "The Way Life Goes (feat. Oh Wonder)",
+      "For Real",
       "Feelings Mutual",
-      "Dark Queen",
+      "Neon Guts (feat. Pharrell Williams)",
+      "Early 20 Rager",
       "UnFazed (feat. The Weeknd)",
+      "Pretty Mami",
       "How to Talk",
       "X",
-      "Neon Guts (feat. Pharrell Williams)",
-      "Pretty Mami",
-      "The Way Life Goes (Remix) (feat. Nicki Minaj)",
-      "Early 20 Rager",
       "Malfunction",
+      "Dark Queen",
+      "XO TOUR Llif3",
+      "Skir Skirr",
+      "Loaded",
+      "Diamonds All on My Wrist",
+      "20 Min"
     ],
   },
   {
@@ -82,7 +86,7 @@ const albums = [
       "Instant Crush (feat. Julian Casablancas)",
       "Lose Yourself to Dance (feat. Pharrell Williams)",
       "Touch (feat. Paul Williams)",
-      "Get Lucky (feat. Pharrell Williams)",
+      "Get Lucky (feat. Pharrell Williams and Nile Rodgers)",
       "Beyond",
       "Motherboard",
       "Fragments of Time (feat. Todd Edwards)",
@@ -126,7 +130,7 @@ const albums = [
     tracks: [
       "Wake Me Up",
       "Cry for Me",
-      "I Can't Fucking Sing",
+      "I Can't F***ing Sing",
       "São Paulo (with Anitta)",
       "Until We're Skin & Bones",
       "Baptized in Fear",
@@ -240,6 +244,8 @@ const albums = [
       "Flying High (feat. Toro y Moi)",
       "I Can Tell",
       "Apple Pie",
+      "Ok Alright (feat. ScHoolboy Q)",
+      "Never Catch Me"
     ],
   },
   {
@@ -264,6 +270,12 @@ const albums = [
       "The Grinch",
       "Death (feat. DaBaby)",
       "RMP",
+      "M's (feat. Lil Yachty & Pi'erre Bourne)",
+      "Bust Down Deux (feat. Youv Dee)",
+      "The Jungle Book (feat. Lil Wop)",
+      "Chosen",
+      "Abandoned (feat. Mariah the Scientist)",
+      "Can You Rap Like Me, Pt. 2 (feat. Chris King)"
     ],
   },
   {
@@ -303,4 +315,4 @@ function getAlbumBySlug(slug) {
   return albums.find((album) => album.slug === slug);
 }
 
-module.exports = { albums, getAlbumBySlug };
+export { albums, getAlbumBySlug };

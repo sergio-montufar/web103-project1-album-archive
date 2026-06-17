@@ -1,12 +1,12 @@
-const path = require("path");
-const express = require("express");
-const { getAlbumBySlug } = require("../data/albums");
+import path from "path";
+import express from "express";
+import { getAlbumBySlug } from "../data/albums.js";
 
 // Serves the HTML page for an individual album. Mounted at /albums.
 // The detail view reads the slug from the URL and fetches /api/albums/:slug,
 // so we only serve the page for albums that actually exist (otherwise we fall
 // through to the 404 handler).
-module.exports = function pages(clientDist) {
+export default function pages(clientDist) {
   const router = express.Router();
 
   router.get("/:slug", (req, res, next) => {
@@ -15,4 +15,4 @@ module.exports = function pages(clientDist) {
   });
 
   return router;
-};
+}

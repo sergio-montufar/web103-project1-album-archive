@@ -1,13 +1,12 @@
-const express = require("express");
-const { albums, getAlbumBySlug } = require("../data/albums");
+import express from "express";
+import { albums, getAlbumBySlug } from "../data/albums.js";
+import AlbumsController from '../controllers/albums.js';
 
 // JSON API for album data. Mounted at /api/albums.
 const router = express.Router();
 
 // All albums (used by the home page grid).
-router.get("/", (req, res) => {
-  res.json(albums);
-});
+router.get("/", AlbumsController.getAlbums);
 
 // A single album by slug (used by the detail page).
 router.get("/:slug", (req, res) => {
@@ -18,4 +17,4 @@ router.get("/:slug", (req, res) => {
   res.json(album);
 });
 
-module.exports = router;
+export default router;

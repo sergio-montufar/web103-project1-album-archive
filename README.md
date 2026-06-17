@@ -1,10 +1,10 @@
-# WEB103 Project 1 - *Album Archive*
+# WEB103 Projects 1 & 2 - *Album Archive*
 
 Submitted by: **Sergio Montufar**
 
 About this web app: **An album archive that lists albums I enjoy. The home page shows each album as a card with its cover art, artist, year, and genre. Clicking a card opens a detail page with the cover, artist, year, genre, and full track list. Built with a Vite frontend (plain HTML/CSS/JS, no framework) and an Express backend that serves the pages, a JSON API, and generated SVG cover art.**
 
-Time spent: **4** hours
+Time spent: **5** hours
 
 ## Required Features
 
@@ -12,17 +12,14 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 - [x] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
-- [x] **The web app displays a title**
-- [x] **The web app displays at least five unique list items, each with at least three displayed attributes (such as title, text, and image)**
-- [x] **The user can click on each item in the list to see a detailed view of it, including all database fields**
-  - [x] **Each detail view should be a unique endpoint, such as as `localhost:3000/bosses/crystalguardian` and `localhost:3000/mantislords`**
-  - [x] *Note: When showing this feature in the video walkthrough, please show the unique URL for each detailed view. We will not be able to give points if we cannot see the implementation* 
-- [x] **The web app serves an appropriate 404 page when no matching route is defined**
-- [x] **The web app is styled using Picocss**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured database table for the list items**
+  - [x] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [x]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
 
 The following **optional** features are implemented:
 
-- [x] The web app displays items in a unique format, such as cards rather than lists or animated list items
+- [x] The user can search for items by a specific attribute
+  - The home page has a search box that filters albums by title, artist, or genre. The query is sent to the backend (`/api/albums?search=...`), which runs a case-insensitive `ILIKE` query against the Postgres `albums` table, so the filtering happens in the database rather than on the client.
 
 The following **additional** features are implemented:
 
@@ -61,6 +58,8 @@ A few things made this project more involved than I first expected:
 - **Getting the track lists right.** A couple of albums (especially the newer and deeper releases) had track lists I initially got wrong, so I verified them against authoritative sources rather than trusting memory.
 
 - **Cover art.** I first generated placeholder SVG cover art on the server from gradient colors, then replaced it with the real album covers. The images live in `client/src/cover_arts/` and are imported through a slug→image map so Vite bundles and fingerprints them, which removed the need for the old server-side cover route entirely.
+
+- **Search.** I added search as the optional feature. The deciding question was *where* to filter — in the browser over the already-loaded list, or in the database. I went with the database (`ILIKE` over title/artist/genre) so the search reflects whatever is actually stored, and debounced the input on the frontend so each keystroke doesn't fire a separate request.
 
 ## License
 

@@ -11,6 +11,10 @@
   text-decoration: none;
   color: inherit;
 }
+.album-search {
+  max-width: 420px;
+  margin: 1rem auto 0;
+}
 
 /* --- Home page album grid --- */
 .album-grid {
