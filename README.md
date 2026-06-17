@@ -23,7 +23,6 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Album cover art is generated on the fly by the server as SVG, so the app needs no external image files
 - [x] The frontend (Vite) and backend (Express) are cleanly separated; the backend exposes a JSON API (`/api/albums`, `/api/albums/:slug`)
 
 ## How to run
